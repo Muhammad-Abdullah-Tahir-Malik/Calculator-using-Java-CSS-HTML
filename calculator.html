@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <div class="Main">
+        <div class="calculator">
+            <form>
+        <div class="display">
+            <input type="text" name="display">
+        </div>
+        <div>
+            <input type="button" value="AC" onclick="cal('AC') ">
+            <input type="button" value="DE" onclick="cal('DE')">
+            <input type="button" value="." onclick="cal('.')">
+            <input type="button" value="/" onclick="cal('/')">
+        </div>
+        <div>
+            <input type="button" value="7" onclick="cal('7')">
+            <input type="button" value="8" onclick="cal('8')">
+            <input type="button" value="9" onclick="cal('9')">
+            <input type="button" value="*" onclick="cal('*')">
+        </div>
+        <div>
+            <input type="button" value="4" onclick="cal('4')">
+            <input type="button" value="5" onclick="cal('5')">
+            <input type="button" value="6" onclick="cal('6')">
+            <input type="button" value="-" onclick="cal('-')">
+        </div>
+        <div>
+            <input type="button" value="1" onclick="cal('1')">
+            <input type="button" value="2" onclick="cal('2')">
+            <input type="button" value="3" onclick="cal('3')">
+            <input type="button" value="+" onclick="cal('+')">
+        </div>
+        <div>
+            <input type="button" value="0" onclick="cal('0')">
+            <input type="button" value="00" onclick="cal('00')">
+            <input type="button" value="=" onclick="cal('=')">
+        </div>
+    </form>
+    </div>
+</div>
+    
+<script>
+    function cal(val){
+        var displayField = document.getElementsByName('display')[0];
+        if(val=='*'||val=='/'||val=='+'||val=='-'||val=='.'){
+            displayField.value += val;
+        }
+        else if (val=='='){
+            displayField.value= eval(displayField.value);
+        }
+        else if(val=='AC'){
+            displayField.value=''
+        }
+        else if(val=='DE'){
+            displayField.value=displayField.value.toString().slice(0,-1)
+        }
+        else{
+            displayField.value += val;
+        }
+    }
+</script>
+</body>
+</html>

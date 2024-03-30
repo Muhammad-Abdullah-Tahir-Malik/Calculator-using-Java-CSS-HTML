@@ -1,0 +1,40 @@
+.body{
+    background-color: darksalmon;
+    display:flex;
+    align-items: center;
+}
+
+
+.Main{
+    display: flex;
+    align-items: center;
+    margin: 10% 0 0 40%;
+    justify-content: center;
+   
+}
+
+.calculator{
+    background-color: #3a4452;
+    padding: 20px;
+}
+
+.calculator form input{
+    border: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.display input{
+    text-align: right;
+    flex: 1;
+}
